@@ -89,4 +89,4 @@ remote_port = 7890
 
 ### 运行效果
 
-![show](../../../../../../Desktop/show.png)
+![show](./show.png)
