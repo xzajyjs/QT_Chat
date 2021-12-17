@@ -90,11 +90,12 @@ remote_port = 7890
 ### 运行效果
 
 ![show](show.png)
-<<<<<<< HEAD
 
 ![show](show2.png)
 
 ![show](show3.png)
 
 ![show](show4.png)
+
+![show](show5.png)
 
