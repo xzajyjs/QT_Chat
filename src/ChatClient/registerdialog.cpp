@@ -6,9 +6,8 @@ RegisterDialog::RegisterDialog(QWidget *parent) :
     ui(new Ui::RegisterDialog)
 {
     ui->setupUi(this);
-//    QRegExp regExp("[0-9]*");
-//    ui->phoneEdit_2->setValidator(new QRegExpValidator(regExp, this));
     createDB();
+    ui->new_username->setFocus();
 }
 
 RegisterDialog::~RegisterDialog()

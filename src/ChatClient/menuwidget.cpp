@@ -110,9 +110,23 @@ void MenuWidget::on_searchButton_clicked()
     ui->table->setModel(&model);
 }
 
+// 信息修改
 void MenuWidget::on_RenewpushButton_clicked()
 {
     ui->nicknameEdit->setText("");
     queryTable();
+}
+
+// 删除
+void MenuWidget::on_delButton_clicked()
+{
+    QSqlQuery query;
+    int res=QMessageBox::information(this, "退出", "是否要退出?", QMessageBox::Yes | QMessageBox::No);
+    if(res==QMessageBox::Yes){
+        QString str = QString("DELETE FROM users WHERE id=%1").arg(ui->userIdEdit->text().toInt());
+        query.exec(str);
+        queryTable();   // 显示刷新
+        ui->userIdEdit->clear();// 清空输入框
+    }
 }
 

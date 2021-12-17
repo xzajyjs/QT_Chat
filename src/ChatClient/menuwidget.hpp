@@ -34,6 +34,8 @@ private slots:
 
     void on_changeButton_clicked();
 
+    void on_delButton_clicked();
+
 private:
     Ui::MenuWidget *ui;
     QSqlDatabase db;

@@ -73,14 +73,7 @@ QDialog{
        <property name="verticalSpacing">
         <number>12</number>
        </property>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="new_username">
-         <property name="maxLength">
-          <number>12</number>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
+       <item row="3" column="1">
         <widget class="QLineEdit" name="newFirst_passwd">
          <property name="maxLength">
           <number>16</number>
@@ -102,19 +95,7 @@ QDialog{
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>密码：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
+       <item row="4" column="1">
         <widget class="QLineEdit" name="newSec_passwd">
          <property name="minimumSize">
           <size>
@@ -130,7 +111,26 @@ QDialog{
          </property>
         </widget>
        </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="new_username">
+         <property name="maxLength">
+          <number>12</number>
+         </property>
+        </widget>
+       </item>
        <item row="3" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>密码：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
         <widget class="QLabel" name="label_3">
          <property name="font">
           <font>
@@ -142,7 +142,7 @@ QDialog{
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QLabel" name="label_4">
          <property name="font">
           <font>
@@ -154,7 +154,7 @@ QDialog{
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QLineEdit" name="nicknameEdit">
          <property name="maxLength">
           <number>11</number>

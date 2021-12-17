@@ -93,6 +93,13 @@ border-radius:8px;
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="delButton">
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>

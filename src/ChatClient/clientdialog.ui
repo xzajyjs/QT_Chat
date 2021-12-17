@@ -18,6 +18,12 @@
   <property name="windowTitle">
    <string>聊天室客户端</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit{
+border-radius:8px;
+}
+</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QListWidget" name="listWidget"/>

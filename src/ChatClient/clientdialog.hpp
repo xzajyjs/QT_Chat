@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QTimer>
+#include <QValidator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class ClientDialog; }
@@ -35,7 +36,7 @@ private slots:
     void onError();
 
     void on_myButton_clicked();
-
+    // 退出登录
     void on_pushButton_clicked();
 
 private:

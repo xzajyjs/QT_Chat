@@ -20,7 +20,6 @@ public:
     ServerDialog(QWidget *parent = nullptr);
     ~ServerDialog();
 
-
 private slots:
     // 创建服务器按钮对应的槽函数
     void on_createButton_clicked();

@@ -5,13 +5,14 @@
 #include "myprofiledialog.hpp"
 extern QString extern_nickname;
 extern QString extern_username;
-//extern QString global_onlineNum;
 ClientDialog::ClientDialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::ClientDialog)
 {
     ui->setupUi(this);
     status = false; // 离线
+    // 端口过滤器
+    ui->serverPortEdit->setValidator(new QIntValidator(1,65535,this));
     ui->connectButton->setFocus();
     ui->usernameEdit->setText(extern_nickname);
     connect(&tcpsocket, SIGNAL(connected()),this,SLOT(onConnected()));
@@ -21,9 +22,6 @@ ClientDialog::ClientDialog(QWidget *parent)
             this, SLOT(onError()));
     if(extern_username == "admin")
         ui->myButton->setText("管理");
-
-
-
 }
 
 ClientDialog::~ClientDialog()
@@ -66,8 +64,7 @@ void ClientDialog::on_connectButton_clicked()
         // 获取聊天室昵称
         username = extern_nickname;
         // 向服务器发送连接请求
-        // 成功发送信号：connected
-        // 失败发送信号：error
+        // 成功发送信号：connected, 失败发送error
         tcpsocket.connectToHost(serverIP, serverPort);
     }
     // 如果当前是在线状态，则断开和服务器连接
